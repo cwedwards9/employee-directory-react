@@ -20,7 +20,7 @@ class EmployeeList extends Component {
 
     filterList(input) {
         const employeesFiltered = this.state.employees.filter(employee => {
-             return employee.name.first === input
+             return employee.name.first === input || employee.name.first.toLowerCase() === input
         });
 
         this.setState({employees: employeesFiltered})
