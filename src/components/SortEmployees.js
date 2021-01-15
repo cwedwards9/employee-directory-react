@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./SortEmployee.css";
 
 
 class SortEmployees extends Component {
@@ -20,7 +19,7 @@ class SortEmployees extends Component {
 
     render() {
         return (
-            <div className="SortEmployees">
+            <div className="SortEmployees" style={{margin: "25px auto"}}>
                 <select onChange={this.handleChange}>
                     <option>--Filter by--</option>
                     <option value="first">First Name</option>
