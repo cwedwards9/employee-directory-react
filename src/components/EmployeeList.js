@@ -3,7 +3,8 @@ import Employee from "./Employee";
 import SearchEmployee from "./SearchEmployee";
 import SortEmployees from "./SortEmployees";
 import axios from "axios";
-const URL = "https://randomuser.me/api/?nat=US&results=25";
+// URL has a header to fix CORS error
+const urlWithProxy = "https://cors-anywhere.herokuapp.com/https://randomuser.me/api/?nat=US&results=25";
 
 class EmployeeList extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class EmployeeList extends Component {
     }
     componentDidMount() {
         // load data
-        axios.get(URL).then(response => {
+        axios.get(urlWithProxy).then(response => {
             this.setState({employees: response.data.results})
             console.log(response.data.results)      
         })
