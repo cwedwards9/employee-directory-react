@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Employee from "./Employee";
 import SearchEmployee from "./SearchEmployee";
+import SortEmployees from "./SortEmployees";
 import axios from "axios";
 const URL = "https://randomuser.me/api/?nat=US&results=25";
 
@@ -9,6 +10,7 @@ class EmployeeList extends Component {
         super(props);
         this.state = { employees: [] };
         this.filterList = this.filterList.bind(this);
+        
     }
     componentDidMount() {
         // load data
@@ -20,11 +22,13 @@ class EmployeeList extends Component {
 
     filterList(input) {
         const employeesFiltered = this.state.employees.filter(employee => {
-             return employee.name.first === input || employee.name.first.toLowerCase() === input
+             return employee.name.first.toLowerCase() === input.toLowerCase();
         });
 
         this.setState({employees: employeesFiltered})
     }
+
+    
 
     render() {
         const employees = this.state.employees.map(employee => (
@@ -32,7 +36,9 @@ class EmployeeList extends Component {
         ))
         return (
             <div className="EmployeeList">
-                <SearchEmployee filterList={this.filterList}/>
+                <SearchEmployee filterList={this.filterList} />
+                <SortEmployees sortByFirstName={this.sortByFirstName} sortByLastName={this.sortByLastName} />
+                
                 <table className="table table-striped">
                     <thead>
                         <tr>
