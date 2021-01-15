@@ -20,5 +20,5 @@ React Components/Methods used:
 
 
 ## License
-Copyright (c) 2021 Chase Edwards
+Copyright (c) 2021 Chase Edwards     
 License Under the MIT License
