@@ -10,7 +10,8 @@ class EmployeeList extends Component {
         super(props);
         this.state = { employees: [] };
         this.filterList = this.filterList.bind(this);
-        
+        this.sortByFirstName = this.sortByFirstName.bind(this);
+        this.sortByLastName = this.sortByLastName.bind(this);
     }
     componentDidMount() {
         // load data
@@ -28,7 +29,37 @@ class EmployeeList extends Component {
         this.setState({employees: employeesFiltered})
     }
 
-    
+    sortByFirstName() {
+        const employeesSorted = this.state.employees.sort((a, b) => {
+            let nameA = a.name.first.toLowerCase();
+            let nameB = b.name.first.toLowerCase();
+            if(nameA < nameB) {
+                return -1;
+            }
+            if(nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+
+        this.setState({employees: employeesSorted});
+    }
+
+    sortByLastName() {
+        const employeesSorted = this.state.employees.sort((a, b) => {
+            let nameA = a.name.last.toLowerCase();
+            let nameB = b.name.last.toLowerCase();
+            if(nameA < nameB) {
+                return -1;
+            }
+            if(nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+
+        this.setState({employees: employeesSorted});
+    }
 
     render() {
         const employees = this.state.employees.map(employee => (
