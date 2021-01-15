@@ -13,10 +13,10 @@ A manager or employee can use this list to view all of the employees, as well as
 Using React class components to create a employee directory, a list of 'employees' generated from the [Random User API](https://randomuser.me/).    
            
 React Components/Methods used:
-    * Class-based components
-        * Constructor function
-        * State object / setState()
-    * componentDidMount() lifecycle method (for API)
+* Class-based components
+    * Constructor function
+    * State object / setState()
+* componentDidMount() lifecycle method (for API)
 
 
 ## License
