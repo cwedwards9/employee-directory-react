@@ -21,7 +21,7 @@ class SortEmployees extends Component {
         return (
             <div className="SortEmployees" style={{margin: "25px auto"}}>
                 <select onChange={this.handleChange}>
-                    <option>--Filter by--</option>
+                    <option>--Sort by--</option>
                     <option value="first">First Name</option>
                     <option value="last">Last Name</option>
                 </select>

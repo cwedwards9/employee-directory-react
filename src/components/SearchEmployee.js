@@ -29,7 +29,9 @@ class SearchEmployee extends Component {
                         name="input"
                         value={this.state.input}
                         onChange={this.handleChange}
-                        placeholder="Find an employee..."/>
+                        placeholder="Find an employee by last name..."
+                        style={{width: "300px"}}
+                    />
                     <button>Search</button>
                 </form>
             </div>
