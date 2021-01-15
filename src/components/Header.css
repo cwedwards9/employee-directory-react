@@ -1,4 +1,7 @@
 .Header {
-    padding: 25px 10px;
-    height: 10em;
+    margin-bottom: 25px;
+    padding: 45px 10px;
+    height: 12em;
+    background-color: #74a696;
+    color: white;
 }
