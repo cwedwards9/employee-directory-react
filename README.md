@@ -6,7 +6,9 @@ To view the app click [here](https://cwedwards9.github.io/employee-directory-rea
 
 ## Description
 This list is a mockup of an employee directory that contains non-sensitive information about a company's current employees.     
-A manager or employee can use this list to view all of the employees, as well as easily access a specific individual either by sorting by first or last name or by filtering the list based off of the employee's last name. 
+A manager or employee can use this list to view all of the employees, as well as easily access a specific individual either by sorting by first or last name or by filtering the list based off of the employee's last name.     
+     
+![Employee Directory Demo](/src/employee-directory-demo.gif)
 
 
 ## Technologies
