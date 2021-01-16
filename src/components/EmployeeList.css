@@ -1,0 +1,20 @@
+/* Placing all styles from all components (except Header) in here since I only have a few */
+
+.SearchEmployee input {
+    width: 20%;
+    min-width: 205px;
+}
+
+.SearchEmployee button {
+    margin-left: 5px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: #74a696;
+    color: white;
+}
+
+.SortEmployees select {
+    width: 10%;
+    min-width: 100px;
+}

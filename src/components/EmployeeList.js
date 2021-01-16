@@ -3,6 +3,7 @@ import Employee from "./Employee";
 import SearchEmployee from "./SearchEmployee";
 import SortEmployees from "./SortEmployees";
 import axios from "axios";
+import "./EmployeeList.css";
 // URL has a header to fix CORS error
 const urlWithProxy = "https://cors-anywhere.herokuapp.com/https://randomuser.me/api/?nat=US&results=25";
 
