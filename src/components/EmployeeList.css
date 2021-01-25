@@ -18,3 +18,53 @@
     width: 10%;
     min-width: 100px;
 }
+
+
+/* Before loading the data, before the data from the API is returned, show a loading animation */
+.loader {
+    margin:auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 8px solid #bdc3c7;
+    width: 100px;
+    height: 100px;
+    border-top-color: #1abc9c;
+    border-bottom-color: #74a696;
+    border-radius: 50%;
+    animation: coloredspin 4s linear infinite;
+  }
+  
+  @keyframes spin {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes coloredspin {
+    0%{
+      transform: rotate(0deg) scale(1);
+      border-top-color: #1abc9c;
+      border-bottom-color: #1abc9c;
+    }
+    25% {
+      border-top-color: #2ecc71;
+      border-bottom-color: #2ecc71;
+    }
+    50% {
+      transform: rotate(360deg) scale(1.05);
+      border-top-color: #3498db;
+      border-bottom-color: #3498db;
+    }
+    75% {
+      border-top-color: #9b59b6;
+      border-bottom-color: #9b59b6;
+    }
+    100%{
+      transform: rotate(720deg) scale(1);
+      border-top-color: #1abc9c;
+      border-bottom-color: #1abc9c;
+    }
+  }
